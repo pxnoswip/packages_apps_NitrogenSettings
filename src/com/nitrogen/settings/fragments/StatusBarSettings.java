@@ -37,6 +37,8 @@ import java.util.Collections;
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
+private static final String NETWORK_TRAFFIC_ROOT = "category_network_traffic";
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -45,6 +47,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+    // TrafficStats will return UNSUPPORTED if the device does not support it.
+        if (TrafficStats.getTotalTxBytes() == TrafficStats.UNSUPPORTED ||
+                TrafficStats.getTotalRxBytes() == TrafficStats.UNSUPPORTED) {
+            prefScreen.removePreference(findPreference(NETWORK_TRAFFIC_ROOT));
+        }
     }
 
     @Override

@@ -25,6 +25,12 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
+           <PreferenceScreen
+                android:key="category_network_traffic"
+                android:title="@string/network_traffic_title"
+                android:summary="@string/network_traffic_summary"
+                android:fragment="com.nitrogen.settings.fragments.NetworkTraffic" />
+
             <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
                 android:key="use_old_mobiletype"
                 android:title="@string/use_old_mobiletype_title"
