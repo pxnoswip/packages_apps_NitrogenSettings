@@ -161,4 +161,8 @@
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Скриншот жестом</string>
     <string name="three_finger_gesture_summary">Свайп тремя пальцами для снятия скриншота</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Медиа-обложка</string>
+    <string name="media_art_summary">Включение медиа-обложки на экране блокировки</string>
 </resources>

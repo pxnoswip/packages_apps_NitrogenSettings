@@ -226,4 +226,7 @@
     <string name="show_qs_on_secure_keyguard_title">Quick settings</string>
     <string name="show_qs_on_secure_keyguard_summary">Show quick settings on secure lockscreen</string>
 
+    <!-- Media art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 </resources>
