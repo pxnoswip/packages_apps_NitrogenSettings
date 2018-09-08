@@ -25,6 +25,12 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
+     <Preference
+        android:fragment="com.nitrogen.settings.fragments.ClockOptions"
+        android:key="clock_options_category"
+        android:summary="@string/clock_options_summary"
+        android:title="@string/clock_options_title" />
+
            <PreferenceScreen
                 android:key="category_network_traffic"
                 android:title="@string/network_traffic_title"
