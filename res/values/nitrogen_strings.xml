@@ -264,4 +264,8 @@
     <string name="pulse_ambient_light_duration_title">Lights duration</string>
     <string name="default_string">Default</string>
     <string name="edge_light_settings">Edge lighting settings</string>
+
+    <!-- Power menu on lockscreen -->
+     <string name="lockscreen_power_menu_disabled_title">Disable power menu on lock screen</string>
+     <string name="lockscreen_power_menu_disabled_summary">This will only disable the power menu on secure lock screens</string>
 </resources>
