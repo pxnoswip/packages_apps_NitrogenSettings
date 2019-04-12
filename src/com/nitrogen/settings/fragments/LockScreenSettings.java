@@ -44,9 +44,10 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+
     private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
     private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
-
+    private static final String KEY_FINGERPRINT_SETTINGS = "fingerprint_settings";
     private CustomSeekBarPreference mPulseBrightness;
     private CustomSeekBarPreference mDozeBrightness;
     private FingerprintManager mFingerprintManager;
@@ -77,7 +78,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         if (defaultPulse == -1) {
             defaultPulse = defaultDoze;
         }
-
+        mFODIconPicker = (Preference) findPreference(KEY_FINGERPRINT_SETTINGS);
+        if (mFODIconPicker != null
+                && !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) {
+            prefScreen.removePreference(mFODIconPicker);
+        }
         mPulseBrightness = (SeekBarPreference) findPreference(KEY_PULSE_BRIGHTNESS);
         int value = Settings.System.getInt(getContentResolver(),
                 Settings.System.OMNI_PULSE_BRIGHTNESS, defaultPulse);
