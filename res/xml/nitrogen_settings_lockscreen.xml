@@ -15,7 +15,6 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/lockscreen_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
@@ -37,6 +36,12 @@
         android:title="@string/fprint_sucess_vib_title"
         android:summary="@string/fprint_sucess_vib_summary"
         android:persistent="false" />
+
+    <Preference
+        android:key="fingerprint_settings"
+        android:title="@string/fingerprint_settings_title"
+        android:icon="@drawable/ic_settings_fingerprint"
+        android:fragment="com.nitrogen.settings.fragments.FingerprintSettings" />
 
         <com.nitrogen.settings.preferences.SecureSettingSwitchPreference
             android:key="status_bar_shown_on_secure_keyguard"

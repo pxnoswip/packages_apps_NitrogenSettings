@@ -247,4 +247,9 @@
 
     <string name="ambient_doze_brightness_title">Ambient display brightness</string>
     <string name="ambient_doze_brightness_summary">Set brightness to use during ambient display on</string>
+
+    <!-- Fingerprint -->
+    <string name="fingerprint_settings_title">Fingerprint</string>
+    <string name="fingerprint_category_custom_icon">Custom icon</string>
+    <string name="fingerprint_custom_icon_select">Select a custom file</string>
 </resources>
