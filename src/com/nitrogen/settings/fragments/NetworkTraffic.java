@@ -53,14 +53,10 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
     private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
     private static final String NETWORK_TRAFFIC_UNIT = "network_traffic_unit";
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
-    private static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
-    private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
     private ListPreference mNetTrafficState;
     private ListPreference mNetTrafficUnit;
     private ListPreference mNetTrafficPeriod;
-    private SystemSettingSwitchPreference mNetTrafficAutohide;
-    private SeekBarPreference mNetTrafficAutohideThreshold;
 
     private int mNetTrafficVal;
     private int MASK_UP;
@@ -86,12 +82,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
         mNetTrafficState = (ListPreference) prefScreen.findPreference(NETWORK_TRAFFIC_STATE);
         mNetTrafficUnit = (ListPreference) prefScreen.findPreference(NETWORK_TRAFFIC_UNIT);
         mNetTrafficPeriod = (ListPreference) prefScreen.findPreference(NETWORK_TRAFFIC_PERIOD);
-        mNetTrafficAutohide = (SystemSettingSwitchPreference) prefScreen.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
-        mNetTrafficAutohideThreshold = (SeekBarPreference) prefScreen.findPreference(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
-
-        // remove autohide preferences becase because they are superflous now with the network traffic shown in QS header
-        prefScreen.removePreference(mNetTrafficAutohide);
-        prefScreen.removePreference(mNetTrafficAutohideThreshold);
 
         // TrafficStats will return UNSUPPORTED if the device does not support it.
         if (TrafficStats.getTotalTxBytes() != TrafficStats.UNSUPPORTED &&
@@ -113,11 +103,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
             mNetTrafficPeriod.setValueIndex(periodIndex >= 0 ? periodIndex : 1);
             mNetTrafficPeriod.setSummary(mNetTrafficPeriod.getEntry());
             mNetTrafficPeriod.setOnPreferenceChangeListener(this);
-
-            int netTrafficAutohideThreshold = Settings.System.getInt(getContentResolver(),
-                    Settings.System.OMNI_NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 10);
-            mNetTrafficAutohideThreshold.setValue(netTrafficAutohideThreshold / 1);
-            mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -143,10 +128,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver, Settings.System.OMNI_NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficPeriod.findIndexOfValue((String) newValue);
             mNetTrafficPeriod.setSummary(mNetTrafficPeriod.getEntries()[index]);
-        } else if (preference == mNetTrafficAutohideThreshold) {
-            int threshold = (Integer) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.OMNI_NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, threshold * 1);
         }
 
         return true;

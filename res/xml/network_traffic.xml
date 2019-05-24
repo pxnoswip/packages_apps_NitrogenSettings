@@ -49,20 +49,4 @@
                 android:persistent="false"
                 android:dependency="network_traffic_enable" />
 
-            <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
-                android:key="network_traffic_autohide"
-                android:title="@string/network_traffic_autohide_title"
-                android:summary="@string/network_traffic_autohide_summary"
-                android:defaultValue="false"
-                android:dependency="network_traffic_enable" />
-
-            <org.omnirom.omnilib.preference.SeekBarPreference
-                android:key="network_traffic_autohide_threshold"
-                android:title="@string/network_traffic_autohide_threshold"
-                android:max="100"
-                settings:min="0"
-                settings:unitsRight="@string/kbs"
-                android:dependency="network_traffic_autohide"
-                android:persistent="false" />
-
 </PreferenceScreen>
