@@ -52,6 +52,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mDozeBrightness;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private Preference mFODIconPicker;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -80,16 +81,16 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         }
         mFODIconPicker = (Preference) findPreference(KEY_FINGERPRINT_SETTINGS);
         if (mFODIconPicker != null
-                && !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) {
+                && !getResources().getBoolean(com.android.internal.R.bool.config_usesFOD)) {
             prefScreen.removePreference(mFODIconPicker);
         }
-        mPulseBrightness = (SeekBarPreference) findPreference(KEY_PULSE_BRIGHTNESS);
+        mPulseBrightness = (CustomSeekBarPreference) findPreference(KEY_PULSE_BRIGHTNESS);
         int value = Settings.System.getInt(getContentResolver(),
                 Settings.System.OMNI_PULSE_BRIGHTNESS, defaultPulse);
         mPulseBrightness.setValue(value);
         mPulseBrightness.setOnPreferenceChangeListener(this);
 
-        mDozeBrightness = (SeekBarPreference) findPreference(KEY_DOZE_BRIGHTNESS);
+        mDozeBrightness = (CustomSeekBarPreference) findPreference(KEY_DOZE_BRIGHTNESS);
         value = Settings.System.getInt(getContentResolver(),
                 Settings.System.OMNI_DOZE_BRIGHTNESS, defaultDoze);
         mDozeBrightness.setValue(value);
