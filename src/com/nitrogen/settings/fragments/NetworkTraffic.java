@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package src.com.nitrogen.settings.fragments;;
+package com.nitrogen.settings.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -38,7 +38,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.internal.util.omni.DeviceUtils;
+import com.android.internal.util.nitrogen.NitrogenUtils;
 import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;

@@ -19,7 +19,7 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
-
+import android.net.TrafficStats;
 import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
@@ -50,7 +50,7 @@ private static final String NETWORK_TRAFFIC_ROOT = "category_network_traffic";
     // TrafficStats will return UNSUPPORTED if the device does not support it.
         if (TrafficStats.getTotalTxBytes() == TrafficStats.UNSUPPORTED ||
                 TrafficStats.getTotalRxBytes() == TrafficStats.UNSUPPORTED) {
-            prefScreen.removePreference(findPreference(NETWORK_TRAFFIC_ROOT));
+            prefSet.removePreference(findPreference(NETWORK_TRAFFIC_ROOT));
         }
     }
 

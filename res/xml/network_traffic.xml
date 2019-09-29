@@ -19,7 +19,7 @@
         android:key="category_network_traffic"
         android:title="@string/network_traffic_title">
 
-           <org.omnirom.omnilib.preference.SystemSettingSwitchPreference
+           <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
                 android:key="network_traffic_enable"
                 android:title="@string/network_traffic_enable_title"
                 android:defaultValue="false"/>
