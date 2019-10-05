@@ -251,4 +251,10 @@
 
     <string name="ambient_notification_light_enabled_title">Always on ambient lights on notification</string>
     <string name="ambient_notification_light_enabled_sumary">Show Always On light bars when receiving a notification</string>
+
+    <string name="ambient_pulse_brightness_title">Ambient notification brightness</string>
+    <string name="ambient_pulse_brightness_summary">Set brightness to use when notifcations are shown</string>
+
+    <string name="ambient_doze_brightness_title">Ambient display brightness</string>
+    <string name="ambient_doze_brightness_summary">Set brightness to use during ambient display on</string>
 </resources>
