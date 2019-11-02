@@ -245,4 +245,10 @@
     <!-- QS tiles haptic feedback -->
     <string name="qs_vibrate_title">Vibrate on touch</string>
     <string name="qs_vibrate_summary">Vibrate when touching QS tiles</string>
+
+    <string name="pulse_ambient_light_title">Pulse light notification</string>
+    <string name="pulse_ambient_light_summary">Show light bar on notification pulse</string>
+
+    <string name="ambient_notification_light_enabled_title">Always on ambient lights on notification</string>
+    <string name="ambient_notification_light_enabled_sumary">Show Always On light bars when receiving a notification</string>
 </resources>
