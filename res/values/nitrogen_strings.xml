@@ -251,7 +251,7 @@
     <!-- Fingerprint -->
     <string name="fingerprint_settings_title">Fingerprint</string>
     <string name="fingerprint_category_custom_icon">Customize FingerPrint</string>
-    <string name="fingerprint_custom_icon_select">FOD Icon Picker</string>
+    <string name="fingerprint_custom_icon_select">Select Image as FOD icon</string>
 
     <!-- Ambient edge lighting -->
      <string name="notification_screen_title">Screen</string>
@@ -322,4 +322,7 @@
     <string name="fod_recog_animation_pureview_halo_ring">Halo ring</string>
     <string name="fod_recog_animation_pureview_molecular">Molecular</string>
 
+    <!-- FOD icon picker -->
+    <string name="fod_icon_picker_title">FOD icon picker</string>
+    <string name="fod_icon_picker_summary">Pick your favourite fingerprint icon</string>
 </resources>

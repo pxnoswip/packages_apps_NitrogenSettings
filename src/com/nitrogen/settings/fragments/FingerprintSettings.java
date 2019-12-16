@@ -63,6 +63,7 @@ public class FingerprintSettings extends SettingsPreferenceFragment implements
     private static final String FINGERPRINT_CATEGORY = "category_fingerprint_custom_icon";
     private static final int GET_CUSTOM_FP_ICON = 69;
     private Preference mFilePicker;
+    private Preference mFODIconPicker;
 
     @Override
     public int getMetricsCategory() {
@@ -75,6 +76,7 @@ public class FingerprintSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.fingerprint_settings);
         mFilePicker = (Preference) findPreference(FINGERPRINT_CUSTOM_ICON);
 
+        mFODIconPicker = (Preference) findPreference("fod_icon_picker_category");
         boolean isFODDevice = getResources().getBoolean(com.android.internal.R.bool.config_usesFOD);
         if (!isFODDevice){
             removePreference(FINGERPRINT_CATEGORY);
