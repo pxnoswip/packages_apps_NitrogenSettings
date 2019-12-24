@@ -216,4 +216,9 @@
     <string name="qs_show_battery_estimate_title">Battery estimates</string>
     <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life in expanded status bar</string>
 
+    <string name="tuner_show_drag_handle">Show drag handle</string>
+    <string name="tuner_show_drag_handle_summary">Shows drag handle in quick settings</string>
+    <string name="tuner_battery_location_bar">Battery in Expanded status bar header</string>
+    <string name="tuner_battery_location_bar_summary">Shows battery in Expanded status bar header</string> 
+
 </resources>
