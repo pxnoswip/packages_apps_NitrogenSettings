@@ -34,6 +34,11 @@
             android:defaultValue="true" />
 
          <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_restart_systemui"
+            android:title="@string/powermenu_restart_systemui"
+            android:defaultValue="true" />
+
+         <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_screenshot"
             android:title="@string/powermenu_screenshot"
             android:defaultValue="false" />
