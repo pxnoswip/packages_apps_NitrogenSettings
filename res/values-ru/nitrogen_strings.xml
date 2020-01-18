@@ -131,9 +131,9 @@
     <string name="powermenu_airplane">Режим полета</string>
     <string name="powermenu_settings">Ярлык настроек</string>
     <string name="powermenu_lockdown">Блокировка устройства</string>
+    <string name="powermenu_soundpanel">Звуковая панель</string>
     <string name="powermenu_users">Пользователь</string>
     <string name="powermenu_logout">Выход из системы</string>
-    <string name="powermenu_torch">Фонарик</string>
 
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_title">Регулятор яркости</string>

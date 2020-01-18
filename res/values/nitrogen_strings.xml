@@ -132,9 +132,9 @@
     <string name="powermenu_airplane">Airplane</string>
     <string name="powermenu_settings">Settings</string>
     <string name="powermenu_lockdown">Lock Down</string>
+    <string name="powermenu_soundpanel">Sound Panel</string>
     <string name="powermenu_users">Users</string>
     <string name="powermenu_logout">Logout</string>
-    <string name="powermenu_torch">Flashlight</string>
 
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_title">Brightness slider</string>
