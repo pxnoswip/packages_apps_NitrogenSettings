@@ -220,4 +220,7 @@
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
+    <string name="long_press_power_torch_title">Long press for flashlight</string>
+    <string name="long_press_power_torch_summary">Toggle flashlight when screen is off</string>
 </resources>
