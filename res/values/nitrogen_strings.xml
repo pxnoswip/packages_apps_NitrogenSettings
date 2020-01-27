@@ -250,8 +250,8 @@
 
     <!-- Fingerprint -->
     <string name="fingerprint_settings_title">Fingerprint</string>
-    <string name="fingerprint_category_custom_icon">Custom icon</string>
-    <string name="fingerprint_custom_icon_select">Select a custom file</string>
+    <string name="fingerprint_category_custom_icon">Customize FingerPrint</string>
+    <string name="fingerprint_custom_icon_select">FOD Icon Picker</string>
 
     <!-- Ambient edge lighting -->
      <string name="notification_screen_title">Screen</string>
@@ -300,4 +300,8 @@
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>
     <string name="clock_date_position">Date position</string>
+
+    <!-- FOD animations -->
+    <string name="fod_recog_animation">FOD recognizing animation</string>
+    <string name="fod_recog_animation_summary">Shows an animation while reading your finger</string>
 </resources>
