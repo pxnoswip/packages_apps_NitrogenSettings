@@ -241,4 +241,10 @@
     <!-- QS tiles haptic feedback -->
     <string name="qs_vibrate_title">Vibrate on touch</string>
     <string name="qs_vibrate_summary">Vibrate when touching QS tiles</string>
+
+    <string name="ambient_pulse_brightness_title">Ambient notification brightness</string>
+    <string name="ambient_pulse_brightness_summary">Set brightness to use when notifcations are shown</string>
+
+    <string name="ambient_doze_brightness_title">Ambient display brightness</string>
+    <string name="ambient_doze_brightness_summary">Set brightness to use during ambient display on</string>
 </resources>
