@@ -54,20 +54,4 @@
         android:title="@string/media_art_title"
         android:summary="@string/media_art_summary"
         android:defaultValue="true" />
-
-        <com.nitrogen.settings.preferences.CustomSeekBarPreference
-        android:key="ambient_doze_brightness"
-        android:title="@string/ambient_doze_brightness_title"
-        android:summary="@string/ambient_doze_brightness_summary"
-        android:max="255"
-        settings:min="1"
-        android:persistent="false" />
-
-        <com.nitrogen.settings.preferences.CustomSeekBarPreference
-        android:key="ambient_pulse_brightness"
-        android:title="@string/ambient_pulse_brightness_title"
-        android:summary="@string/ambient_pulse_brightness_summary"
-        android:max="255"
-        settings:min="1"
-        android:persistent="false" />
 </PreferenceScreen>
